@@ -14,8 +14,8 @@ export function FaqSection() {
   const { t } = useLang();
 
   return (
-    <section id="faq" className="scroll-mt-24 bg-secondary/40">
-      <div className="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:py-28">
+    <section id="faq" className="scroll-mt-24">
+      <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:py-24">
         <SectionHead kicker={t.faq.label} title={t.faq.heading} />
 
         <Reveal delay={0.08}>

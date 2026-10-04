@@ -35,6 +35,13 @@ const es = {
     contact: "Contacto",
     call: "Márcanos",
     langLabel: "English",
+    workWithUs: "Trabaja con nosotros",
+  },
+  ui: {
+    videoSoon: "Video próximamente",
+    viewWork: "Ver trabajos",
+    viewServices: "Ver servicios",
+    callCta: "Márcanos",
   },
   hero: {
     badge: "Carrocería · Pintura · Soldadura · Fabricación",
@@ -129,21 +136,25 @@ const es = {
     items: [
       {
         icon: "spray",
+        short: "Pintura",
         t: "Pintura y modificación de cabinas",
         d: "Lijado, resane y enmascarillado completo antes de pintar. Acabado parejo, no parchado.",
       },
       {
         icon: "truck",
+        short: "Box trucks",
         t: "Reparación de box trucks",
         d: "Golpes, óxido en costuras, postes y techo. Te la dejamos lisa.",
       },
       {
         icon: "door",
+        short: "Roll-up",
         t: "Puertas roll-up",
         d: "¿Ya no sube? La reparamos para que vuelvas a cargar sin batallar.",
       },
       {
         icon: "flame",
+        short: "Soldadura",
         t: "Soldadura y modificaciones",
         d: "Cortamos, soldamos y fabricamos. También montamos caja sobre chasis.",
       },
@@ -363,6 +374,13 @@ const en: Dict = {
     contact: "Contact",
     call: "Call us",
     langLabel: "Español",
+    workWithUs: "Work with us",
+  },
+  ui: {
+    videoSoon: "Video coming soon",
+    viewWork: "See the work",
+    viewServices: "See services",
+    callCta: "Call us",
   },
   hero: {
     badge: "Body · Paint · Welding · Fabrication",
@@ -457,21 +475,25 @@ const en: Dict = {
     items: [
       {
         icon: "spray",
+        short: "Paint",
         t: "Cab paint & mods",
         d: "Full sanding, filler and masking before paint. Even finish, not patched.",
       },
       {
         icon: "truck",
+        short: "Box trucks",
         t: "Box truck repair",
         d: "Dents, rust in the seams, posts and roof. We leave it smooth.",
       },
       {
         icon: "door",
+        short: "Roll-up",
         t: "Roll-up doors",
         d: "Won't go up? We fix it so you can load without a fight.",
       },
       {
         icon: "flame",
+        short: "Welding",
         t: "Welding & mods",
         d: "We cut, weld and fabricate. We also mount beds on chassis.",
       },

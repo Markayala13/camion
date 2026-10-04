@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { ArrowUpRight, Menu, Phone } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import { useLang, CONTACT } from "@/lib/i18n";
+import { ArrowButton } from "./bits";
 import { LangToggle } from "./lang-toggle";
 import {
   Sheet,
@@ -37,10 +38,8 @@ export function SiteHeader() {
     <header className="fixed inset-x-0 top-3 z-50 px-3 sm:top-4 sm:px-8 lg:px-16">
       <div
         className={cn(
-          "mx-auto flex max-w-6xl items-center justify-between gap-3 overflow-hidden rounded-full border pl-2 pr-2 transition-all duration-300 sm:gap-4 sm:pr-3",
-          scrolled
-            ? "border-brand-line bg-card/95 shadow-lg backdrop-blur-md"
-            : "border-brand-line/50 bg-card/85 shadow-md backdrop-blur-sm",
+          "mx-auto flex max-w-6xl items-center justify-between gap-3 overflow-hidden rounded-full border border-brand-line bg-card pl-2 pr-2 transition-shadow duration-300 sm:gap-4 sm:pr-3",
+          scrolled ? "shadow-xl" : "shadow-md",
         )}
       >
         {/* Logo with a gold hazard tab */}
@@ -81,14 +80,11 @@ export function SiteHeader() {
         {/* Right cluster */}
         <div className="flex items-center gap-2 sm:gap-2.5">
           <LangToggle />
-          <a
-            href={CONTACT.phoneHref}
-            data-press
-            className="hidden items-center gap-1.5 rounded-full bg-brand-gold px-4 py-2.5 font-body text-sm font-bold text-brand-ink shadow-sm transition-colors hover:bg-brand-gold-deep sm:inline-flex"
-          >
-            {CONTACT.phoneDisplay}
-            <ArrowUpRight className="size-4" />
-          </a>
+          <span className="hidden sm:inline-flex">
+            <ArrowButton href={CONTACT.phoneHref} variant="purple">
+              {CONTACT.phoneDisplay}
+            </ArrowButton>
+          </span>
 
           {/* Mobile: quick-call + menu */}
           <a

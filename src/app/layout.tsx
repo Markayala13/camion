@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Archivo_Black, Barlow } from "next/font/google";
+import { Roboto_Condensed, Barlow } from "next/font/google";
 import "./globals.css";
 
-const heading = Archivo_Black({
-  weight: "400",
+// Matches the cloned reference (Roboto Condensed Black) for the display type.
+const heading = Roboto_Condensed({
+  weight: ["700", "900"],
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap",

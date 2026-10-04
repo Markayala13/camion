@@ -120,10 +120,10 @@
     @apply bg-background text-foreground antialiased;
   }
   h1, h2, h3, .font-heading {
-    font-family: var(--font-heading), system-ui, sans-serif;
-    font-weight: 400;
-    letter-spacing: -0.015em;
-    line-height: 0.95;
+    font-family: var(--font-heading), "Arial Narrow", system-ui, sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.022em;
+    line-height: 0.9;
   }
   /* Every pressable element gets the physical press + pointer */
   button:not(:disabled), [role="button"]:not(:disabled), a[data-press] {

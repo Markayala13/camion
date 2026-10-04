@@ -46,12 +46,11 @@ export function BlurText({
         show: { opacity: 1, transition: { duration: 0.4, ease: EASE_OUT } },
       }
     : {
-        hidden: { opacity: 0, filter: "blur(10px)", transform: "translateY(42px)" },
+        hidden: { opacity: 0, transform: "translateY(28px)" },
         show: {
           opacity: 1,
-          filter: "blur(0px)",
           transform: "translateY(0px)",
-          transition: { duration: 0.55, ease: EASE_OUT },
+          transition: { duration: 0.5, ease: EASE_OUT },
         },
       };
 
@@ -69,7 +68,7 @@ export function BlurText({
           key={`${p}-${i}`}
           variants={piece}
           aria-hidden
-          style={{ display: "inline-block", willChange: "transform, filter, opacity" }}
+          style={{ display: "inline-block", willChange: "transform, opacity" }}
         >
           {p}
           {by === "word" && i < pieces.length - 1 ? " " : ""}

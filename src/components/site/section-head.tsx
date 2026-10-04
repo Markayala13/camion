@@ -2,6 +2,7 @@
 
 import { Reveal } from "./reveal";
 import { BlurText } from "./blur-text";
+import { Chip } from "./bits";
 import { cn } from "@/lib/utils";
 
 type Tone = "light" | "dark";
@@ -12,33 +13,32 @@ type Props = {
   sub?: string;
   tone?: Tone;
   className?: string;
+  titleClassName?: string;
 };
 
 /**
- * Section header: a hazard-bar kicker + a bold Archivo Black heading.
- * `tone="dark"` flips text to cream for purple / ink bands.
+ * Bradford-style section header: a pill chip on top, then a giant Anton
+ * headline. `tone="dark"` flips text to cream for purple / ink panels.
  */
-export function SectionHead({ kicker, title, sub, tone = "light", className }: Props) {
+export function SectionHead({
+  kicker,
+  title,
+  sub,
+  tone = "light",
+  className,
+  titleClassName,
+}: Props) {
   const dark = tone === "dark";
   return (
     <div className={cn("max-w-3xl", className)}>
       <Reveal>
-        <span className="flex items-center gap-3">
-          <span className="hazard-sm h-3 w-12 rounded-sm" aria-hidden />
-          <span
-            className={cn(
-              "text-xs font-bold uppercase tracking-[0.18em]",
-              dark ? "text-brand-gold" : "text-brand-purple",
-            )}
-          >
-            {kicker}
-          </span>
-        </span>
+        <Chip tone={dark ? "cream" : "muted"}>{kicker}</Chip>
       </Reveal>
       <h2
         className={cn(
-          "mt-5 font-heading text-4xl uppercase leading-[0.95] sm:text-5xl lg:text-[3.5rem]",
+          "mt-5 font-heading text-5xl uppercase leading-[0.88] sm:text-6xl lg:text-7xl",
           dark ? "text-brand-cream" : "text-brand-ink",
+          titleClassName,
         )}
       >
         <BlurText text={title} by="word" stagger={0.07} />
